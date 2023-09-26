@@ -4,9 +4,17 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // The `/api/products` endpoint
 
 // get all products
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
+  try {
+    const readerData = await Product.findAll({
+      include: [{ model: Category }, { model: Tag, through: ProductTag }],
+    });
+    res.status(200).json(readerData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // get one product
@@ -22,13 +30,17 @@ router.post('/', (req, res) => {
       product_name: "Basketball",
       price: 200.00,
       stock: 3,
-      tagIds: [1, 2, 3, 4]
+      tag_id: [1, 2, 3, 4]
     }
   */
+ 
+    console.log(req.body);
   Product.create(req.body)
     .then((product) => {
+      console.log("creating");
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
-      if (req.body.tagIds.length) {
+      if (req.body.tag_id.length) {
+        console.log("tags");
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
             product_id: product.id,
