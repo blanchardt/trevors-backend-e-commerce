@@ -9,7 +9,6 @@ Set up the backend for an e-commerce website to communicate with a MySQL databas
 * [Usage](#usage)  
 * [Credits](#usage)  
 * [License](#license)    
-* [Tests](#tests)  
 * [Questions](#questions)
 
 ## Installation  
@@ -59,13 +58,6 @@ Link to repo: https://github.com/blanchardt/trevors-backend-e-commerce
 
 ## License  
 This project is licensed under the MIT license.  
-
-## Tests  
-To run tests, run the following command:  
-
-```  
-npm test  
-```  
 
 ## Questions  
 If you have any questions about the repo, open an issue or contact me directly at blanchardt@merrimack.edu.  You can find more of my work at [blanchardt](https://github.com/blanchardt/).  
