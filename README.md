@@ -21,7 +21,7 @@ npm install
 ## Usage  
 To run the program type npm start in your console while in the base route of the directory.  Open up insomnia afterwards.  You will then be able to create a get, post, put, and delete requests with the paths of /api/products, /api/categories, or /api/tags.  
 Walkthrough Video:  
-https://drive.google.com/file/d/1UqRK_zI_BfnSgeNzQpsffyp0g6A0hdrq/view?usp=sharing  
+https://drive.google.com/file/d/1aM4NG54rEwbSx7rJoOPpXOoviOsqrXHl/view?usp=sharing   
 Examples of a get, post, put, and delete requests:  
 tags, get requests:  
 ![using insomnia to get all tags](assets/images/tags-get-all.png)  
